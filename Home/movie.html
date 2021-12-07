@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book your movies</title>
+        <link rel="stylesheet" href="style.css"
+    </head>
+
+
+    <script>
+        let sortDirection=false;
+        let tableData=[{Movie Genre:"Horror",Movie Title:"Bhoot hun main",Starring:"Ankush Mourya",Direcor:"Mahesh Bhatt"}];
+        
+        Function loadTableData(tableData)
+        {
+            const tableBody= document.getElementById('tableData');
+            let dataHtml='';
+            for(let data of tableData){
+                dataHtml+=<tr><td></td><td></td></tr>;
+            }
+        }
+        
+    
+    </script>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie Genre</th>
+                    <th>Movie Title</th>
+                    <th>Starring</th>
+                    <th>Director</th>
+                    <th>Online Booking</th>
+                </tr>
+            
+            </thead>
+        
+        </table>
+    
+    </body>
+</html>

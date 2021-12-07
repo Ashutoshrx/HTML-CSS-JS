@@ -1,0 +1,13 @@
+#wrapper{
+    background-color: aquamarine;
+    height: fit-content;
+    width: fit-content;
+}
+#header{
+    color:rgb(35, 27, 54) ;
+    text-align: center;
+    font-size: 40px;
+}
+body{
+    background-color: rgba(95, 156, 34, 0.178);
+}

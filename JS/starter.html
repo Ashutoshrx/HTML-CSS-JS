@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Getting started with JavaScript</title>
+</head>
+<body>
+    <script>
+         console.log("We are about to take off with JavaScript");
+        document.write("We are about to get started with Javascript.");
+        // let n = 10;
+        let string = "";
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 5; j <= i; j++) {
+                string += j;
+            }
+        string += " <br>";
+        }
+        document.write(string);
+
+        
+        function factorial(n){
+            let answer = 1;
+            if (n == 0 || n == 1){
+                return answer;
+            }else{
+                for(var i = n; i >= 1; i--){
+                    answer = answer * i;
+                }
+            return answer;
+        }  
+    }
+
+    let x=prompt("Enter a number");
+    alert(`The factorial of ${x} is ${factorial(x)}`);
+
+    let sum=0;
+    for(let y=1;y<=100;y++){
+        sum+=y;
+    }
+    alert(`The sum of first 100 numbers is ${sum}`);
+
+    for(let i=34;i<=45;i++){
+        if(i==36 && i==40 &&i==44){
+            continue;
+        }
+        else if(i==39){
+            document.write("Thirty Nine <br>");
+        }
+        else if(i==43){
+            document.write("Forty Three <br>");
+        }
+        else{
+            document.write(`${i}<br>`)
+        }
+       
+    }
+
+    </script>
+    <div id="stackpath">
+        Getting started with JavaScript
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+ background-image: url("C:\HTML\bg.jpg");
+ background-color: #cccccc;
+ background-position: center;
+ background-size: cover;
+}
+
+
+h1 {
+  color: orange;
+}
+h2
+{
+	color:grey
+}
+h2
+{
+	color:GrayText
+}
+h5
+{
+	color:red
+}

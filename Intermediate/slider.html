@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <style>
+        #slider{
+            margin-top: 15%;
+            margin-left: 30%;
+        }
+        #slider ul li img{
+            width: 1200px;
+            height: 800px;
+        }
+
+        #slider ul .items{
+            float: left;
+            list-style-type: none;
+            overflow: hidden;
+            width: 200px;
+            transition: 2s all ease-in;
+            opacity: 70%;
+        }
+
+        #slider ul .items:hover{
+            transform:scale(0.8);
+            width: 1200px;
+            opacity: 100%;
+        }
+
+
+    </style>
+    
+    <div id="slider">
+        <ul>
+            <li class="items"><img src="Images/Chamber.jpg"></li>
+            <li class="items"><img src="Images/jett.jpg"></li>
+            <li class="items"><img src="Images/omen.jpg"></li>
+            <li class="items"><img src="Images/pheonix.jpg"></li>
+            <li class="items"><img src="Images/reyna.jpg"></li>
+            <li class="items"><img src="Images/yoru.jpg"></li> 
+
+        </ul>
+
+    </div>
+
+</body>
+</html>
