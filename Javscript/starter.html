@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript</title>
+</head>
+
+<body>
+    <h1> I am learning Javascript</h1>
+    <button class="clsClick" id="click" onclick="buttonOnClick()">Click me</button>
+
+    <script>
+        console.log(document.getElementById("click"));
+        console.log(document.getElementsByClassName("clsClick"));
+
+        function buttonOnClick() {
+            document.getElementById("click").style.border='2px solid blue';
+            console.log("Hi, button has been clicked");
+        }
+
+        // document.write("Hi, I am starting Javascript, This is coming from script tag");
+        // console.log("THis is to check the console");  
+
+        var final = 0;
+        function add(...b) {
+
+            var final = final + b;
+            return final;
+
+        }
+        // console.log(add(30,43,12,13));
+    </script>
+
+</body>
+
+</html>

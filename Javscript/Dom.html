@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM manipulation</title>
+    <style>
+        body {
+            background-color: rgb(124, 223, 226);
+        }
+
+        .div1 {
+            padding: 12px;
+            background-color: chocolate;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="firstContainer">
+        <h1>Trying to manipulate using JavaScript</h1>
+        <div class="div1" id="secondContainer">
+            <button id="but1" class="button" onclick="changeDiv()">Change Color</button>
+            <!-- <button id="but2" class="button" onclick="changeAgain()">Change Color of the Original</button> -->
+        </div>
+        <div id="thirdContainer">
+            <p>I am second paragraph coming from HTML</p>
+        </div>
+    </div>
+    <script>
+        //Now I will be using  event listener in JavaScript.
+        window.onload=function() {
+            console.log("Document was loaded");
+        }
+        // console.log(document.getElementsByTagName(`div`));
+        firstContainer.addEventListener(`click`,function(){
+            console.log("Container was clicked");
+        })
+
+        secondContainer.addEventListener(`mouseover`,function(){
+            document.getElementById(`secondContainer`).style.background="pink";
+            // console.log("Mouse has come into this container");
+        })
+
+        secondContainer.addEventListener(`mouseout`,function(){
+            document.getElementById(`thirdContainer`).style.background="#a2ce94";
+            // console.log("Mouse has gone out of this container");
+        })
+
+        // Elements can be added through javaScript in the runtime
+        let tn=document.getElementsByTagName(`div`);
+        createdElement=document.createElement(`h3`);
+        createdElement.innerText="I am coming from Javascript in runtime";
+        tn[1].appendChild(createdElement);
+        // console.log(tn);
+
+        let testDiv = document.getElementById(`testDiv`);
+        // console.log(testDiv.innerText);
+
+        // console.log(document.getElementsByClassName);
+
+        let elemClass = document.getElementsByClassName(`div1`);
+
+        function changeDiv() {
+            if (but1.innerText==`Change Color`) {
+                elemClass[0].style.background = "yellow";
+                but1.innerText = "Change to Original";
+            }
+            else{
+                elemClass[0].style.background = "chocolate";
+                but1.innerText="Change Color";
+                
+            }
+
+            // document.getElementsByClassName(`div`)[0].style.background="yellow";
+
+        }
+
+        // console.log(document.getElementById(`but1`));
+        // console.log(document.getElementsByClassName(`button`));
+
+    </script>
+
+</body>
+
+</html>

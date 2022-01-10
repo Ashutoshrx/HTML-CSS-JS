@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting Javascript part-II</title>
+</head>
+<style>
+    body{
+        background-color: rgb(13, 75, 13);
+        color: whitesmoke;
+    }
+    .container{
+        /* background-color: aqua; */
+        padding: 10px;
+        width: fit-content;
+    }
+
+    #buttonId{
+        
+        
+        color: pink;
+        background-color: black;
+    }
+
+</style>
+<body>
+    <h2>I am learning JavaScript and this is my second file.</h2>
+    <div class="container">
+        <button id="buttonId" onclick="onClickButton()">click me</button>
+    </div>
+    <div class="container">
+        <h3>This is my second division</h3>
+    </div>
+    
+
+    <script>
+        function onClickButton(){
+            document.getElementById("buttonId").style.border='2px solid blue';
+            console.log("button has been clicked");
+        }
+        console.log((document.getElementsByClassName("container")));
+    </script>
+</body>
+</html>
