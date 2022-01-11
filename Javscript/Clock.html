@@ -21,7 +21,13 @@
         let date;
         setInterval(() => {
             a = new Date();
-            time = `${a.getHours()}:${a.getMinutes()}:${a.getSeconds()}`;
+            if(a.getHours()>12){
+                time = `${a.getHours()-12}:${a.getMinutes()}:${a.getSeconds()} PM`;
+            }
+            else{
+                time = `${a.getHours()}:${a.getMinutes()}:${a.getSeconds()} AM`;
+            }
+            // time = `${a.getHours()}:${a.getMinutes()}:${a.getSeconds()}`;
             date = a.toLocaleDateString();
             document.getElementById('dateTime').innerHTML=`${time} on ${date}`;
             
