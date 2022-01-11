@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock using SetInterval</title>
+</head>
+
+<body>
+    <div class="firstContainer">
+        <h1>Time & Date</h1>
+        <h2><span id="dateTime"></span>
+        </h2>
+    </div>
+    <script>
+        // Need to use new keyword here or else it won't work.
+        let a;
+        let time;
+        let date;
+        setInterval(() => {
+            a = new Date();
+            time = `${a.getHours()}:${a.getMinutes()}:${a.getSeconds()}`;
+            date = a.toLocaleDateString();
+            document.getElementById('dateTime').innerHTML=`${time} on ${date}`;
+            
+        }, 1000);
+        // setInterval(() => {
+
+        //     time = new Date();
+        //     createdElement = document.createElement(`h2`);
+        //     if (time.getHours() > 12) {
+        //         createdElement.innerText = time.getHours() - 12 + " : " + time.getMinutes() + " : " +time.getSeconds()+ " PM";
+        //     }
+        //     else {
+        //         createdElement.innerText = time.getHours() + " : " + time.getMinutes() + " : "+time.getSeconds() + " AM";
+        //     }
+        //     // createdElement.innerText=time.getHours()+":"+time.getMinutes();
+        //     let tn = document.getElementsByTagName(`div`);
+        //     tn[0].appendChild(createdElement);
+        // }, 1000);
+
+    </script>
+</body>
+
+</html>
